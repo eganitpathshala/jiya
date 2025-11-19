@@ -79,7 +79,7 @@
         }
         .input-field:focus { border-color: var(--secondary); outline: none; box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); }
 
-        /* SOCIAL ICONS - FIXED & COLORFUL */
+        /* SOCIAL ICONS */
         .social-btn {
             width: 50px; height: 50px;
             border-radius: 50%;
@@ -101,45 +101,19 @@
         .loader-progress { width: 0%; height: 100%; background: var(--primary); animation: load 1.5s ease-in-out forwards; }
         @keyframes load { to { width: 100%; } }
 
-        /* BOLD ROTATING NEON RING (Restored) */
-        .rotating-border {
-            position: relative;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        /* The glowing trail */
+        /* BOLD ROTATING NEON RING */
+        .rotating-border { position: relative; border-radius: 50%; z-index: 1; }
         .rotating-border::before {
-            content: '';
-            position: absolute;
-            inset: -10px; /* Makes the glow wider */
-            border-radius: 50%;
+            content: ''; position: absolute; inset: -10px; border-radius: 50%;
             background: conic-gradient(transparent 0deg, transparent 270deg, #00f2ff 360deg);
-            animation: rotate 4s linear infinite;
-            z-index: -2;
-            filter: blur(10px); /* Adds the neon glow effect */
+            animation: rotate 4s linear infinite; z-index: -2; filter: blur(10px);
         }
-        /* The sharp ring */
         .rotating-border::after {
-            content: '';
-            position: absolute;
-            inset: -4px; 
-            border-radius: 50%;
+            content: ''; position: absolute; inset: -4px; border-radius: 50%;
             background: conic-gradient(transparent 0deg, transparent 270deg, #00f2ff 360deg);
-            animation: rotate 4s linear infinite;
-            z-index: -1;
+            animation: rotate 4s linear infinite; z-index: -1;
         }
-        /* Inner Black Circle to mask center */
-        .rotating-inner {
-            position: absolute;
-            inset: 2px;
-            background: #050505;
-            border-radius: 50%;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
+        .rotating-inner { position: absolute; inset: 2px; background: #050505; border-radius: 50%; z-index: 0; display: flex; align-items: center; justify-content: center; }
         @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
@@ -166,8 +140,8 @@
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="text-sm font-medium text-gray-300 hover:text-orange-500 transition uppercase tracking-widest">Home</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-orange-500 transition uppercase tracking-widest">Services</a>
                     <a href="#future" class="text-sm font-medium text-gray-300 hover:text-orange-500 transition uppercase tracking-widest">Future</a>
-                    <a href="#offers" class="text-sm font-medium text-gray-300 hover:text-orange-500 transition uppercase tracking-widest">Offers</a>
                     <a href="#contact-zone" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-orange-500 hover:text-white transition">GET QUOTE</a>
                 </div>
             </div>
@@ -187,8 +161,92 @@
                 <p class="text-gray-400 text-lg mb-8 max-w-lg">
                     Transforming blueprints into reality. From <span class="text-white font-bold">3D Mapping</span> to <span class="text-white font-bold">Turnkey Construction</span>.
                 </p>
-                <div class="flex gap-4">
+                <div class="flex gap-4 mb-8">
                     <a href="#contact-zone" class="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition">START PROJECT</a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 border-t border-gray-800 pt-8">
+                    <div>
+                        <div class="text-3xl font-bold text-white font-mono">150<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Projects Done</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white font-mono">10<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Years Exp</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-white font-mono">100<span class="text-orange-500">%</span></div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-y border-white/5 bg-white/5 backdrop-blur-md z-20 relative">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="group">
+                    <i class="fas fa-drafting-compass text-3xl text-gray-500 group-hover:text-orange-500 transition mb-2"></i>
+                    <h4 class="font-bold text-white">FREE MAP DESIGN</h4>
+                    <p class="text-xs text-gray-400">With Every Contract</p>
+                </div>
+                <div class="group">
+                    <i class="fas fa-video text-3xl text-gray-500 group-hover:text-orange-500 transition mb-2"></i>
+                    <h4 class="font-bold text-white">CCTV MONITORING</h4>
+                    <p class="text-xs text-gray-400">Live Site Access</p>
+                </div>
+                <div class="group">
+                    <i class="fas fa-hard-hat text-3xl text-gray-500 group-hover:text-orange-500 transition mb-2"></i>
+                    <h4 class="font-bold text-white">EXPERT ENGINEERS</h4>
+                    <p class="text-xs text-gray-400">Site Supervision</p>
+                </div>
+                <div class="group">
+                    <i class="fas fa-file-contract text-3xl text-gray-500 group-hover:text-orange-500 transition mb-2"></i>
+                    <h4 class="font-bold text-white">LEGAL AGREEMENT</h4>
+                    <p class="text-xs text-gray-400">On Stamp Paper</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-white">CORE <span class="text-orange-500">COMPETENCIES</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-orange-500 to-transparent mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Comprehensive construction solutions tailored to your needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-xl group relative overflow-hidden" data-tilt>
+                    <div class="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30 text-blue-400">
+                        <i class="fas fa-pencil-ruler text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Architecture & Mapping</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        2D/3D Elevation, Structural Design, and Vastu Compliant layouts. We provide detailed blueprints approved by municipal standards.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl group relative overflow-hidden border-orange-500/30" data-tilt>
+                    <div class="w-14 h-14 bg-orange-900/30 rounded-lg flex items-center justify-center mb-6 border border-orange-500/30 text-orange-400">
+                        <i class="fas fa-trowel-bricks text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Residential Construction</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        End-to-end construction with material. We handle excavation, foundation, brickwork, and finishing with premium quality materials.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl group relative overflow-hidden" data-tilt>
+                    <div class="w-14 h-14 bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30 text-purple-400">
+                        <i class="fas fa-swatchbook text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Interiors & Renovation</h3>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Transform your space with Modular Kitchens, False Ceilings, and modern electrical planning. We revive old structures.
+                    </p>
                 </div>
             </div>
         </div>
@@ -226,6 +284,44 @@
         </div>
     </section>
 
+    <section id="process" class="py-20 bg-black/80 relative border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">HOW WE <span class="text-orange-500">WORK</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                <div class="text-center bg-black p-4">
+                    <div class="w-16 h-16 mx-auto bg-gray-900 rounded-full flex items-center justify-center border-2 border-orange-500 mb-4">
+                        <span class="text-xl font-bold text-white">01</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Consultation</h4>
+                    <p class="text-gray-400 text-xs">Site visit & Requirement gathering.</p>
+                </div>
+                <div class="text-center bg-black p-4">
+                    <div class="w-16 h-16 mx-auto bg-gray-900 rounded-full flex items-center justify-center border-2 border-gray-700 mb-4">
+                        <span class="text-xl font-bold text-white">02</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Design & Estimate</h4>
+                    <p class="text-gray-400 text-xs">2D/3D Maps & Cost approval.</p>
+                </div>
+                <div class="text-center bg-black p-4">
+                    <div class="w-16 h-16 mx-auto bg-gray-900 rounded-full flex items-center justify-center border-2 border-gray-700 mb-4">
+                        <span class="text-xl font-bold text-white">03</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Construction</h4>
+                    <p class="text-gray-400 text-xs">Execution under engineer supervision.</p>
+                </div>
+                <div class="text-center bg-black p-4">
+                    <div class="w-16 h-16 mx-auto bg-gray-900 rounded-full flex items-center justify-center border-2 border-gray-700 mb-4">
+                        <span class="text-xl font-bold text-white">04</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Handover</h4>
+                    <p class="text-gray-400 text-xs">Key handover with warranty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="offers" class="py-24 bg-black relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -239,7 +335,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                
                 <div class="glass-card offer-card p-8 rounded-2xl" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
                     <div class="flex justify-between items-start mb-6">
                         <i class="fas fa-drafting-compass text-4xl text-blue-400"></i>
@@ -251,7 +346,6 @@
                         We provide complete 2D/3D map designing free of cost with every construction project.
                     </p>
                 </div>
-
                 <div class="glass-card offer-card p-8 rounded-2xl" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
                     <div class="flex justify-between items-start mb-6">
                         <i class="fas fa-video text-4xl text-red-500"></i>
@@ -263,7 +357,6 @@
                         We install free CCTV cameras at your site so you can monitor progress live from anywhere.
                     </p>
                 </div>
-
                 <div class="glass-card offer-card p-8 rounded-2xl" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
                     <div class="flex justify-between items-start mb-6">
                         <i class="fas fa-layer-group text-4xl text-green-400"></i>
@@ -275,19 +368,17 @@
                         You choose the brand of Cement, Steel, and Tiles. We build according to your preference.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <div id="contact-zone" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <div id="contact-zone" class="relative w-full min-h-screen flex flex-col justify-between">
         
         <div id="canvas-bottom"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/3 bg-[url('https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/city.svg')] opacity-10 bg-repeat-x bg-bottom" style="background-size: 500px; z-index: 1;"></div>
 
-        <div class="absolute bottom-0 left-0 w-full h-1/3 bg-[url('https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/city.svg')] opacity-10 bg-repeat-x bg-bottom" style="background-size: 500px;"></div>
-
-        <div class="relative z-20 w-full max-w-7xl mx-auto px-4 py-20">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="relative z-20 w-full max-w-7xl mx-auto px-4 py-20 flex-grow flex items-center">
+            <div class="grid lg:grid-cols-2 gap-20 items-center w-full">
                 
                 <div class="text-left">
                     <h2 class="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tighter">
@@ -340,12 +431,42 @@
                         <p id="form-status" class="text-center text-sm mt-2 hidden"></p>
                     </form>
                 </div>
-
             </div>
         </div>
 
-        <footer class="absolute bottom-0 w-full py-6 text-center z-20 border-t border-white/5">
-            <p class="text-white/20 text-xs uppercase tracking-widest">© 2025 Jiya Construction. All rights reserved.</p>
+        <footer class="relative w-full bg-black/80 border-t border-gray-900 pt-12 pb-6 z-20 mt-auto">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8 mb-8 text-left">
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i class="fas fa-building text-orange-500 text-2xl"></i>
+                            <span class="text-2xl font-bold text-white">JIYA CON.</span>
+                        </div>
+                        <p class="text-gray-500 max-w-xs mb-4 text-sm">
+                            Professional Civil Engineering & Construction services committed to quality, safety, and innovation.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Services</h4>
+                        <ul class="space-y-2 text-gray-500 text-sm">
+                            <li><a href="#" class="hover:text-orange-500">Residential Construction</a></li>
+                            <li><a href="#" class="hover:text-orange-500">Architectural Planning</a></li>
+                            <li><a href="#" class="hover:text-orange-500">Interior Design</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2 text-gray-500 text-sm">
+                            <li><a href="#" class="hover:text-orange-500">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-orange-500">Terms of Service</a></li>
+                            <li>Proprietor: Guddu Kumar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-900 pt-6 text-center">
+                    <p class="text-gray-600 text-sm">© 2025 Jiya Construction. All rights reserved.</p>
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -354,10 +475,9 @@
         window.addEventListener('load', () => {
             const loader = document.getElementById('loader');
             gsap.to(loader, { opacity: 0, duration: 0.5, delay: 1.5, onComplete: () => loader.style.display = 'none' });
-            
             initTypewriter();
             initTerrainCanvas();
-            initRealisticSpace(); // Fixed: No blue squares, round stars
+            initRealisticSpace(); 
             VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max: 15, speed: 400, glare: true, "max-glare": 0.2 });
         });
 
@@ -424,7 +544,7 @@
             animate();
         }
 
-        // 5. CANVAS 2: REALISTIC DEEP SPACE (Fixed: Round Stars)
+        // 5. CANVAS 2: REALISTIC DEEP SPACE
         function initRealisticSpace() {
             const container = document.getElementById('canvas-bottom');
             const scene = new THREE.Scene();
@@ -433,7 +553,6 @@
             renderer.setSize(container.clientWidth, container.clientHeight);
             container.appendChild(renderer.domElement);
 
-            // Generate CIRCULAR Texture (to avoid blue squares)
             const canvas = document.createElement('canvas');
             canvas.width = 32; canvas.height = 32;
             const ctx = canvas.getContext('2d');
@@ -445,36 +564,23 @@
             const starTexture = new THREE.Texture(canvas);
             starTexture.needsUpdate = true;
 
-            // 1. Background Stars
+            // Background Stars
             const bgStarsGeo = new THREE.BufferGeometry();
             const bgCount = 2000;
             const bgPos = new Float32Array(bgCount * 3);
             for(let i=0; i<bgCount*3; i++) bgPos[i] = (Math.random()-0.5) * 600;
             bgStarsGeo.setAttribute('position', new THREE.BufferAttribute(bgPos, 3));
-            
-            const bgMat = new THREE.PointsMaterial({
-                color: 0xffffff, size: 0.7, 
-                map: starTexture, transparent: true, opacity: 0.8, depthWrite: false
-            });
+            const bgMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.7, map: starTexture, transparent: true, opacity: 0.8, depthWrite: false });
             const bgStars = new THREE.Points(bgStarsGeo, bgMat);
             scene.add(bgStars);
 
-            // 2. Floating "Blue" Particles (Fixed shape and transparency)
+            // Floating Particles
             const floatGeo = new THREE.BufferGeometry();
             const floatCount = 150;
             const floatPos = new Float32Array(floatCount * 3);
             for(let i=0; i<floatCount*3; i++) floatPos[i] = (Math.random()-0.5) * 200;
             floatGeo.setAttribute('position', new THREE.BufferAttribute(floatPos, 3));
-            
-            const floatMat = new THREE.PointsMaterial({
-                color: 0x00f2ff, 
-                size: 1.5, // Smaller size
-                map: starTexture, // Round shape
-                transparent: true, 
-                opacity: 0.4,
-                blending: THREE.AdditiveBlending,
-                depthWrite: false
-            });
+            const floatMat = new THREE.PointsMaterial({ color: 0x00f2ff, size: 1.5, map: starTexture, transparent: true, opacity: 0.4, blending: THREE.AdditiveBlending, depthWrite: false });
             const floatParticles = new THREE.Points(floatGeo, floatMat);
             scene.add(floatParticles);
 
@@ -482,19 +588,12 @@
 
             let time = 0;
             function animate() {
-                requestAnimationFrame(animate);
-                time += 0.0005;
-                
+                requestAnimationFrame(animate); time += 0.0005;
                 bgStars.rotation.y = time * 0.5;
                 floatParticles.rotation.y = time * 1.5;
-                
                 const positions = floatGeo.attributes.position.array;
-                for(let i=0; i<floatCount; i++) {
-                    const i3 = i*3;
-                    positions[i3+1] += Math.sin(time * 10 + positions[i3]) * 0.02;
-                }
+                for(let i=0; i<floatCount; i++) { const i3 = i*3; positions[i3+1] += Math.sin(time * 10 + positions[i3]) * 0.02; }
                 floatGeo.attributes.position.needsUpdate = true;
-
                 renderer.render(scene, camera);
             }
             animate();
